@@ -1,4 +1,5 @@
 #include <iostream>
+#include "ExampleClass.h"
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
