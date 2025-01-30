@@ -1,6 +1,8 @@
 # Clion Folders
 .idea
+build
 cmake-build-debug
+cmake-build-debug-coverage
 
 # Prerequisites
 *.d
