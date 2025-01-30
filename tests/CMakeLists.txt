@@ -1,12 +1,15 @@
-project(Google_tests)
-
+# Fetch GoogleTest
 add_subdirectory(libs/googletest)
+include(GoogleTest)
 
-include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
-include_directories(${CMAKE_SOURCE_DIR}/include)
+# Enable testing
+enable_testing()
 
-add_executable(Google_Tests_run test_ExampleClass.cpp)
+# Add the test executable
+add_executable(Session_Test Session_Test.cpp)
 
-target_link_libraries(Google_Tests_run ExampleClass)
+# Link the class
+target_link_libraries(Session_Test Session gtest gtest_main)
 
-target_link_libraries(Google_Tests_run gtest gtest_main)
+# Discover tests
+gtest_discover_tests(Session_Test)
