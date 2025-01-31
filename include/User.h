@@ -6,6 +6,13 @@
 using namespace std;
 
 class User {
+private:
+    string username, password;
+
+    bool isTeacher;
+
+    static string input(const string &prompt);
+
 public:
     User();
 
