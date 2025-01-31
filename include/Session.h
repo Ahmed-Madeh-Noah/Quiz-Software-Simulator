@@ -1,16 +1,13 @@
 #ifndef SESSION_H
 #define SESSION_H
 
-#include <iostream>
-
-using namespace std;
-
+#include "User.h"
 
 class Session {
 public:
-  int add (int a, int b);
+    Session();
+
+    static int add(int a, int b);
 };
-
-
 
 #endif //SESSION_H
