@@ -12,10 +12,7 @@ string User::input(const string &prompt) {
 }
 
 User::User() {
-    constexpr int maxPassTrials = 3;
-    string inputUsername, inputPassword;
-    int passTrials;
-    inputUsername = input("your username");
+    ;
 }
 
 int User::subtract(int a, int b) {
