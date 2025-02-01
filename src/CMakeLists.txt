@@ -1,6 +1,6 @@
 # Create two separate classes
-add_library(Session STATIC ../include/Session.h Session.cpp)
-add_library(User STATIC ../include/User.h User.cpp)
+add_library(Session STATIC ../include/Session.hpp Session.cpp)
+add_library(User STATIC ../include/User.hpp User.cpp)
 
 # Include directories for headers
 target_include_directories(Session PUBLIC ../include)

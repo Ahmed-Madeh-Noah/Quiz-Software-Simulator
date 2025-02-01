@@ -1,4 +1,4 @@
-#include "User.h"
+#include "User.hpp"
 
 string User::input(const string &prompt) {
     string output;

@@ -1,7 +1,7 @@
 #ifndef SESSION_H
 #define SESSION_H
 
-#include "User.h"
+#include "User.hpp"
 
 class Session {
 private:

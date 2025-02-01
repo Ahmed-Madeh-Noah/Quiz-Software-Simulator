@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "Session.h"
+#include "Session.hpp"
 
 TEST(SessionTest, AddTest) {
     EXPECT_EQ(Session::add(2, 3), 5);

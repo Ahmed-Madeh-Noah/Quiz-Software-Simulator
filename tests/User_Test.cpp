@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "User.h"
+#include "User.hpp"
 
 TEST(UserTest, SubtractTest) {
     EXPECT_EQ(User::subtract(5, 3), 2);
