@@ -1,10 +1,10 @@
-# Create two separate classes
-add_library(Session STATIC Session.cpp)
+# Create the User library
 add_library(User STATIC User.cpp)
-
-# Include directories for headers
-target_include_directories(Session PUBLIC ../include)
 target_include_directories(User PUBLIC ../include)
+
+# Create the Session library
+add_library(Session STATIC Session.cpp)
+target_include_directories(Session PUBLIC ../include)
 
 # Create main executable
 add_executable(${PROJECT_NAME} main.cpp)
