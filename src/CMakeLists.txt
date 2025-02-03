@@ -7,7 +7,7 @@ target_include_directories(Session PUBLIC ../include)
 target_include_directories(User PUBLIC ../include)
 
 # Create main executable
-add_executable(Quiz_Software_Simulator main.cpp)
+add_executable(${PROJECT_NAME} main.cpp)
 
 # Link the class to main executable
-target_link_libraries(Quiz_Software_Simulator Session User)
+target_link_libraries(${PROJECT_NAME} Session User)
