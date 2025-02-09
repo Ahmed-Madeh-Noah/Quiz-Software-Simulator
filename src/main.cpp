@@ -4,5 +4,5 @@ int main() {
     while (true) {
         auto session = new Session();
     }
-    return 0;
+    return EXIT_SUCCESS;
 }
