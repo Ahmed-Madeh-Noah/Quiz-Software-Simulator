@@ -2,16 +2,15 @@
 #define USER_H
 
 #include <iostream>
-
-using namespace std;
+#include <string>
 
 class User {
 private:
-    string username, password;
+    std::string username, password;
 
     bool isTeacher;
 
-    static string input(const string &prompt);
+    static std::string input(const std::string &prompt);
 
 public:
     User();
