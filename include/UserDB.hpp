@@ -1,7 +1,7 @@
 #ifndef USERDB_HPP
 #define USERDB_HPP
 
-#include <iostream>
+#include "Database.hpp"
 
 
 class UserDB {
