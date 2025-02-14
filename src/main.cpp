@@ -1,6 +1,8 @@
-#include <iostream>
+#include "Session.hpp"
 
 int main() {
-  printf("Hello World\n");
-  return EXIT_SUCCESS;
+    while (true) {
+        Session session;
+    }
+    return EXIT_SUCCESS;
 }
