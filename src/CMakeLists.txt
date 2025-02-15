@@ -1,5 +1,11 @@
+add_subdirectory(../external/rapidcsv)
+
 add_library(Database STATIC Database.cpp)
-target_include_directories(Database PUBLIC ../include)
+target_include_directories(
+    Database PUBLIC
+    ../include
+    ../include/external/rapidcsv/src
+)
 
 add_library(UserDB STATIC UserDB.cpp)
 target_include_directories(UserDB PUBLIC ../include)
