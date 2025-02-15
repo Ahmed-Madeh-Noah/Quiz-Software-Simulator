@@ -1,9 +1,10 @@
-# Clion Folders
+# Additional Folders and Files
 .idea
 .vscode
 build
 cmake-build-debug
 cmake-build-debug-coverage
+run.sh
 
 # Prerequisites
 *.d
