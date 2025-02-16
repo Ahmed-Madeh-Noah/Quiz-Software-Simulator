@@ -2,7 +2,7 @@
 #define DATABASE_HPP
 
 #include <iostream>
-#include "rapidcsv"
+#include "rapidcsv.h"
 
 
 class Database {
