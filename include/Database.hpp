@@ -1,8 +1,6 @@
 #ifndef DATABASE_HPP
 #define DATABASE_HPP
 
-#include <iostream>
-#include <string>
 #include "rapidcsv.h"
 
 
