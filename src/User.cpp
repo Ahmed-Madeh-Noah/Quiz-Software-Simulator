@@ -1,6 +1,6 @@
 #include "User.hpp"
 
-int User::subtract(int a, int b) {
+int User::subtract(const int a, const int b) {
     return a - b;
 }
 

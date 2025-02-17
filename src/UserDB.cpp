@@ -1,5 +1,5 @@
 #include "UserDB.hpp"
 
-int UserDB::multiply(int a, int b) {
+int UserDB::multiply(const int a, const int b) {
     return a * b;
 }

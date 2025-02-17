@@ -6,7 +6,7 @@
 
 class QuizDB {
 public:
-    static int modulo(int a, int b);
+    static int modulo(const int a, const int b);
 };
 
 
