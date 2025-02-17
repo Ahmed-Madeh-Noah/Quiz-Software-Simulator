@@ -2,6 +2,8 @@
 #define DATABASE_HPP
 
 #include <iostream>
+#include <string>
+#include <algorithm>
 #include "rapidcsv.h"
 
 

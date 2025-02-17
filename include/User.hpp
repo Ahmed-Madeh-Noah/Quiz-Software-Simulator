@@ -5,6 +5,9 @@
 
 
 class User {
+private:
+    static bool validate_int(const std::string &input);
+
 public:
     static int subtract(int a, int b);
 };
