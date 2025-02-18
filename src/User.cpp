@@ -1,6 +1,10 @@
 #include "User.hpp"
 #include <algorithm>
 
+User::User(const std::string &input_username) {
+    username = input_username;
+}
+
 int User::subtract(const int a, const int b) {
     return a - b;
 }
