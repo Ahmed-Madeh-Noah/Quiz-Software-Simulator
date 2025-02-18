@@ -16,6 +16,9 @@ public:
 
     explicit User(const std::string &input_username);
 
+    User(const std::string &input_username, const std::string &input_password, const std::string &input_type,
+         int input_rowNumber);
+
     static int subtract(int a, int b);
 };
 

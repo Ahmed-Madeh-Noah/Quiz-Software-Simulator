@@ -5,6 +5,14 @@ User::User(const std::string &input_username) {
     username = input_username;
 }
 
+User::User(const std::string &input_username, const std::string &input_password, const std::string &input_type,
+           int input_rowNumber) {
+    username = input_username;
+    password = input_password;
+    type = input_type;
+    rowNumber = input_rowNumber;
+}
+
 int User::subtract(const int a, const int b) {
     return a - b;
 }
