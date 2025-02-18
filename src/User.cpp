@@ -3,6 +3,7 @@
 
 User::User(const std::string &input_username) {
     username = input_username;
+    rowNumber = -1;
 }
 
 User::User(const std::string &input_username, const std::string &input_password, const std::string &input_type,
