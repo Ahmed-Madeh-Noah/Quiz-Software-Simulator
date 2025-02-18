@@ -3,7 +3,6 @@
 
 User::User(const std::string &input_username) {
     username = input_username;
-    rowNumber = -1;
 }
 
 User::User(const std::string &input_username, const std::string &input_password, const std::string &input_type,
@@ -29,7 +28,7 @@ std::string User::_input(const std::string &prompt, const std::string &data_type
             printf("Cannot accept empty input\n");
             askForInput = true;
         }
-        if (data_type == "int" && !_validate_int(output)) {
+        if ("int" == data_type && !_validate_int(output)) {
             printf("Cannot accept non-numeric input\n");
             askForInput = true;
         }
