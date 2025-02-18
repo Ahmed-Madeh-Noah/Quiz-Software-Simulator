@@ -6,15 +6,15 @@
 
 class Database {
 private:
-    rapidcsv::Document _dbFile;
-
     std::string _fullFileName;
 
+protected:
+    rapidcsv::Document _dbFile;
     bool _firstRun = false;
 
-    explicit Database(const std::string &file_name);
-
     ~Database();
+
+    explicit Database(const std::string &file_name);
 
 public:
     static int divide(int a, int b);

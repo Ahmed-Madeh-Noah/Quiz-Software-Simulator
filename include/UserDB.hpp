@@ -4,8 +4,13 @@
 #include "Database.hpp"
 
 
-class UserDB {
+class UserDB : private Database {
+private:
+    void _fill_placeholder_data();
+
 public:
+    explicit UserDB(const std::string &file_name);
+
     static int multiply(int a, int b);
 };
 
