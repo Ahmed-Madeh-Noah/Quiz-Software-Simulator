@@ -1,7 +1,7 @@
 #ifndef SESSION_HPP
 #define SESSION_HPP
 
-#include "User.hpp"
+#include "UserDB.hpp"
 
 
 class Session {

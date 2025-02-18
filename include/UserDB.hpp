@@ -2,6 +2,7 @@
 #define USERDB_HPP
 
 #include "Database.hpp"
+#include "User.hpp"
 
 
 class UserDB : private Database {
