@@ -1,17 +1,17 @@
 #include "Database.hpp"
 
 Database::Database(const std::string &file_name) {
-    fullFileName = file_name + " Database.csv";
+    _fullFileName = file_name + " Database.csv";
     try {
-        dbFile = rapidcsv::Document(fullFileName);
+        _dbFile = rapidcsv::Document(_fullFileName);
     } catch (const std::ios_base::failure &) {
-        firstRun = true;
-        dbFile = rapidcsv::Document();
+        _firstRun = true;
+        _dbFile = rapidcsv::Document();
     }
 }
 
 Database::~Database() {
-    dbFile.Save(fullFileName);
+    _dbFile.Save(_fullFileName);
 }
 
 int Database::divide(const int a, const int b) {

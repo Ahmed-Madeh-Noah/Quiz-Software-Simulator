@@ -6,11 +6,11 @@
 
 class Database {
 private:
-    rapidcsv::Document dbFile;
+    rapidcsv::Document _dbFile;
 
-    std::string fullFileName;
+    std::string _fullFileName;
 
-    bool firstRun = false;
+    bool _firstRun = false;
 
     explicit Database(const std::string &file_name);
 
