@@ -6,7 +6,7 @@
 
 class Session {
 public:
-    static int add(int a, int b);
+    static int add(const int &a, const int &b);
 };
 
 

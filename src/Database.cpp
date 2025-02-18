@@ -14,6 +14,6 @@ Database::~Database() {
     _dbFile.Save(_fullFileName);
 }
 
-int Database::divide(const int a, const int b) {
+int Database::divide(const int &a, const int &b) {
     return a / b;
 }

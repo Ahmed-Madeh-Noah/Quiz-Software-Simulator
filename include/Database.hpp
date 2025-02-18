@@ -17,7 +17,7 @@ protected:
     explicit Database(const std::string &file_name);
 
 public:
-    static int divide(int a, int b);
+    static int divide(const int &a, const int &b);
 };
 
 

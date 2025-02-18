@@ -12,7 +12,7 @@ private:
 public:
     explicit UserDB(const std::string &file_name);
 
-    static int multiply(int a, int b);
+    static int multiply(const int &a, const int &b);
 };
 
 
