@@ -2,7 +2,7 @@
 #define SESSION_HPP
 
 
-#include <iostream>
+#include "User.hpp"
 
 class Session {
 public:
