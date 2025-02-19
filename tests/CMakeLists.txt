@@ -11,6 +11,6 @@ FetchContent_MakeAvailable(googletest)
 
 set(LIBS gtest_main)
 
-#add_executable(Database_Test Database_Test.cpp)
-#target_link_libraries(Database_Test gtest_main Database)
-#add_test(NAME Database_Test COMMAND Database_Test)
+add_executable(Session_Test Session_Test.cpp)
+target_link_libraries(Session_Test gtest_main Session)
+add_test(NAME Session_Test COMMAND Session_Test)
