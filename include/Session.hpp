@@ -2,8 +2,12 @@
 #define SESSION_HPP
 
 
+#include <iostream>
+
 class Session {
 public:
+    Session();
+
     static int add(const int &a, const int &b);
 };
 
