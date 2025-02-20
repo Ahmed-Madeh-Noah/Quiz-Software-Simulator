@@ -5,7 +5,10 @@
 #include "Database.hpp"
 #include "User.hpp"
 
-class UserDB {
+class UserDB : public Database {
+private:
+    explicit UserDB();
+
 public:
     static int multiply(const int &a, const int &b);
 };

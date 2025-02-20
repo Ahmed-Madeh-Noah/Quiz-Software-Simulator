@@ -7,8 +7,10 @@
 class Database {
 private:
     std::string _fullFileName;
-    rapidcsv::Document _dbFile;
+
+protected:
     bool _isFirstRun = false;
+    rapidcsv::Document _dbFile;
 
     explicit Database(const std::string &file_name);
 
