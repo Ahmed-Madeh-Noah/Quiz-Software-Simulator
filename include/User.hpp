@@ -7,9 +7,9 @@
 
 class User {
 public:
-    static int subtract(const int &a, const int &b);
-
     static std::string input(const std::string &prompt);
+
+    static int subtract(const int &a, const int &b);
 };
 
 

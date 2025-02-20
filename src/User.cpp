@@ -1,9 +1,5 @@
 #include "User.hpp"
 
-int User::subtract(const int &a, const int &b) {
-    return a - b;
-}
-
 std::string User::input(const std::string &prompt) {
     std::string output;
     while (output.empty()) {
@@ -13,4 +9,8 @@ std::string User::input(const std::string &prompt) {
             printf("Cannot accept empty input\n");
     }
     return output;
+}
+
+int User::subtract(const int &a, const int &b) {
+    return a - b;
 }
