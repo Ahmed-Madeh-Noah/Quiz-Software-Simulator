@@ -1,8 +1,6 @@
-#include "Session.hpp"
+#include <iostream>
 
 int main() {
-    while (true) {
-        Session session;
-    }
+    std::cout << "Hello World!" << std::endl;
     return EXIT_SUCCESS;
 }
