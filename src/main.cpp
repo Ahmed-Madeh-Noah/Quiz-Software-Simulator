@@ -1,9 +1,8 @@
-#include <iostream>
 #include <Session.hpp>
 
 int main() {
-    while (true) {
+    do {
         Session session;
-    }
+    } while (true);
     return EXIT_SUCCESS;
 }
