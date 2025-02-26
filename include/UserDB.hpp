@@ -6,6 +6,8 @@
 
 class UserDB : private Database {
 public:
+    UserDB();
+
     static int subtract(const int &a, const int &b);
 };
 
