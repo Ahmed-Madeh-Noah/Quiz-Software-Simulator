@@ -2,7 +2,9 @@
 #define USERDB_HPP
 
 
-class UserDB {
+#include "Database.hpp"
+
+class UserDB : private Database {
 public:
     static int subtract(const int &a, const int &b);
 };

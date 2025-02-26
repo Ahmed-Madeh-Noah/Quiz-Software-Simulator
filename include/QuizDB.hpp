@@ -2,7 +2,9 @@
 #define QUIZDB_HPP
 
 
-class QuizDB {
+#include "Database.hpp"
+
+class QuizDB : private Database {
 public:
     static int multiply(const int &a, const int &b);
 };
