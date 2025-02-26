@@ -7,11 +7,11 @@
 class Database {
 private:
     std::string _fullFileName;
-    rapidcsv::Document _dbFile;
-    bool _initializedFile = true;
 
 protected:
-    explicit Database(const std::string &file_name);
+    explicit Database(const std::string &file_name, const int &column_lookup = 0, const int &row_lookup = -1);
+
+    rapidcsv::Document _dbFile;
 
     ~Database();
 

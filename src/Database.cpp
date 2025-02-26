@@ -1,13 +1,8 @@
 #include "Database.hpp"
 
-Database::Database(const std::string &file_name) {
+Database::Database(const std::string &file_name, const int &column_lookup, const int &row_lookup) {
     _fullFileName = file_name + " Database.csv";
-    try {
-        _dbFile = rapidcsv::Document(_fullFileName);
-    } catch (const std::ios_base::failure &) {
-        _dbFile = rapidcsv::Document();
-        _initializedFile = false;
-    }
+    _dbFile = rapidcsv::Document(_fullFileName, rapidcsv::LabelParams(column_lookup, row_lookup));
 }
 
 Database::~Database() {
