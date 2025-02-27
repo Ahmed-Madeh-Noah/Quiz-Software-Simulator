@@ -2,7 +2,12 @@
 #define USERDB_HPP
 
 
+#include <rapidcsv.h>
+
 class UserDB {
+private:
+    rapidcsv::Document _dbFile;
+
 public:
     static int multiply(const int &a, const int &b);
 };
