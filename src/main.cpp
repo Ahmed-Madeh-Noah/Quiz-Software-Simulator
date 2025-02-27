@@ -1,5 +1,4 @@
 #include <Session.hpp>
-#include <User.hpp>
 
 int main() {
     do {

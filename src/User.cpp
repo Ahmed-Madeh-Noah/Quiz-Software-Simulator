@@ -1,5 +1,4 @@
 #include "User.hpp"
-#include <iostream>
 
 std::string User::input(const std::string &main_prompt, const std::string &data_type, const std::string &other_option) {
     while (true) {
