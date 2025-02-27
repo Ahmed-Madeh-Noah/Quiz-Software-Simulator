@@ -6,7 +6,8 @@
 
 class User {
 public:
-    static std::string input(const std::string &prompt);
+    static std::string input(const std::string &main_prompt, const std::string &data_type = "std::string",
+                             const std::string &other_option = "");
 
     static int subtract(const int &a, const int &b);
 };
