@@ -2,8 +2,12 @@
 #define USER_HPP
 
 
+#include <string>
+
 class User {
 public:
+    static std::string input(const std::string &prompt);
+
     static int subtract(const int &a, const int &b);
 };
 
