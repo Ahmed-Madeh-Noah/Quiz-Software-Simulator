@@ -3,7 +3,6 @@
 
 
 #include <UserDB.hpp>
-#include <User.hpp>
 
 class Session {
 private:

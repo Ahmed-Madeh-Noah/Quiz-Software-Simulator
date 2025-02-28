@@ -3,6 +3,7 @@
 
 
 #include <rapidcsv.h>
+#include <User.hpp>
 
 class UserDB : private rapidcsv::Document {
 private:
