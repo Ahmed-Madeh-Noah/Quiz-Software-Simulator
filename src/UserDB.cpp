@@ -15,7 +15,6 @@ UserDB::UserDB() : rapidcsv::Document() {
         this->Save(_fileName);
         this->Load(_fileName, rapidcsv::LabelParams(0, 0));
     }
-    std::cout << this->GetCell<std::string>("Password", "Admin") << std::endl;
 }
 
 UserDB::~UserDB() {
