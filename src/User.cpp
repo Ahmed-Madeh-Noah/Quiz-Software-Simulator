@@ -1,5 +1,9 @@
 #include "User.hpp"
 
+User::User(const std::string &username) {
+    this->_username = username;
+}
+
 std::string User::input(const std::string &main_prompt, const std::string &data_type, const std::string &other_option) {
     while (true) {
         if (data_type == "std::string")
