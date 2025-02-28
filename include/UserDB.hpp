@@ -9,12 +9,12 @@ class UserDB : private rapidcsv::Document {
 private:
     const std::string _fileName = "User Database.csv";
 
+public:
+    UserDB();
+
     int get_users_count() const;
 
     bool get_user(User &user) const;
-
-public:
-    UserDB();
 
     ~UserDB();
 

@@ -9,6 +9,8 @@ private:
     UserDB _userDB;
     User _user;
 
+    void sign_up();
+
 public:
     static int add(const int &a, const int &b);
 };

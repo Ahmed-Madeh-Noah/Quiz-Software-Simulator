@@ -1,19 +1,6 @@
 #include "UserDB.hpp"
 #include <filesystem>
 
-int UserDB::get_users_count() const {
-    return this->GetColumnCount() - 1;
-}
-
-bool UserDB::get_user(User &user) const {
-    try {
-        std::vector<std::string> row = this->GetRow<std::string>(user.username);
-        return true;
-    } catch (const std::out_of_range &e) {
-        return false;
-    }
-}
-
 UserDB::UserDB() : rapidcsv::Document() {
     if (!std::filesystem::exists(this->_fileName)) {
         std::ofstream file(this->_fileName);
@@ -27,6 +14,19 @@ UserDB::UserDB() : rapidcsv::Document() {
             this->InsertColumn(i - 1, placeholderData, columnNames[i]);
         this->Save(this->_fileName);
         this->Load(this->_fileName, rapidcsv::LabelParams(0, 0));
+    }
+}
+
+int UserDB::get_users_count() const {
+    return this->GetColumnCount() - 1;
+}
+
+bool UserDB::get_user(User &user) const {
+    try {
+        std::vector<std::string> row = this->GetRow<std::string>(user.username);
+        return true;
+    } catch (const std::out_of_range &e) {
+        return false;
     }
 }
 
