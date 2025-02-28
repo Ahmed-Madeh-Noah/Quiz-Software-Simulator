@@ -11,6 +11,8 @@ private:
 
     int get_users_count() const;
 
+    bool get_user(User &user) const;
+
 public:
     UserDB();
 

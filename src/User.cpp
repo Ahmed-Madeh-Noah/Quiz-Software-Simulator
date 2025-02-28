@@ -1,13 +1,13 @@
 #include "User.hpp"
 
 User::User(const std::vector<std::string> &row) {
-    this->_username = row.at(0);
+    this->username = row.at(0);
     this->_password = row.at(1);
     this->_type = row.at(2);
 }
 
 User::User(const std::string &username) {
-    this->_username = username;
+    this->username = username;
 }
 
 std::string User::input(const std::string &main_prompt, const std::string &data_type, const std::string &other_option) {

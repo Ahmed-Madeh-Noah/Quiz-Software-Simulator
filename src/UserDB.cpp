@@ -5,6 +5,15 @@ int UserDB::get_users_count() const {
     return this->GetColumnCount() - 1;
 }
 
+bool UserDB::get_user(User &user) const {
+    try {
+        std::vector<std::string> row = this->GetRow<std::string>(user.username);
+        return true;
+    } catch (const std::out_of_range &e) {
+        return false;
+    }
+}
+
 UserDB::UserDB() : rapidcsv::Document() {
     if (!std::filesystem::exists(this->_fileName)) {
         std::ofstream file(this->_fileName);
