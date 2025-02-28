@@ -1,5 +1,11 @@
 #include "User.hpp"
 
+User::User(const std::vector<std::string> &row) {
+    this->_username = row.at(0);
+    this->_password = row.at(1);
+    this->_type = row.at(2);
+}
+
 User::User(const std::string &username) {
     this->_username = username;
 }
