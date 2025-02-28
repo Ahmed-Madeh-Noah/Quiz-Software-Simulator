@@ -8,6 +8,8 @@ class UserDB : private rapidcsv::Document {
 private:
     const std::string _fileName = "User Database.csv";
 
+    int get_users_count() const;
+
 public:
     UserDB();
 

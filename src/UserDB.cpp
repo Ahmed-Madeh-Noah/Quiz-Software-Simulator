@@ -1,6 +1,10 @@
 #include "UserDB.hpp"
 #include <filesystem>
 
+int UserDB::get_users_count() const {
+    return this->GetColumnCount() - 1;
+}
+
 UserDB::UserDB() : rapidcsv::Document() {
     if (!std::filesystem::exists(_fileName)) {
         std::ofstream file(_fileName);
