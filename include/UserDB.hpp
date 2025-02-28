@@ -4,10 +4,7 @@
 
 #include <rapidcsv.h>
 
-class UserDB {
-private:
-    rapidcsv::Document _dbFile;
-
+class UserDB : private rapidcsv::Document {
 public:
     static int multiply(const int &a, const int &b);
 };
