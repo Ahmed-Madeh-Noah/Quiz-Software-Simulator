@@ -6,6 +6,8 @@
 
 class UserDB : private rapidcsv::Document {
 public:
+    UserDB();
+
     static int multiply(const int &a, const int &b);
 };
 
