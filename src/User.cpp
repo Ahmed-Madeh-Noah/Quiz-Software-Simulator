@@ -31,16 +31,16 @@ std::string User::input(const std::string &main_prompt, const std::string &data_
 }
 
 bool User::change_pin(const bool &first_time) {
-    constexpr int MAX_PI_CHANGE_TRIALS = 3;
+    constexpr int MAX_PASS_CHANGE_TRIALS = 3;
     int trials = 0;
-    while (++trials <= MAX_PI_CHANGE_TRIALS) {
+    while (++trials <= MAX_PASS_CHANGE_TRIALS) {
         if (!first_time) {
             std::string oldPassword = User::input("Your Old Password");
             if (oldPassword == "0")
                 return false;
             if (oldPassword != this->_password) {
                 printf("Wrong Password\n");
-                printf("You have %d trials out of %d left\n", trials, MAX_PI_CHANGE_TRIALS);
+                printf("You have %d trials out of %d left\n", trials, MAX_PASS_CHANGE_TRIALS);
                 continue;
             }
         }
@@ -52,7 +52,7 @@ bool User::change_pin(const bool &first_time) {
             return false;
         if (newPassword != newPasswordConfirmation) {
             printf("Your new password and it's confirmation do not match\n");
-            printf("You have %d trials out of %d left\n", trials, MAX_PI_CHANGE_TRIALS);
+            printf("You have %d trials out of %d left\n", trials, MAX_PASS_CHANGE_TRIALS);
             continue;
         }
         this->_password = newPassword;
