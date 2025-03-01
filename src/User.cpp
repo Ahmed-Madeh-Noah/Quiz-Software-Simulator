@@ -13,7 +13,7 @@ User::User(const std::string &username) {
 std::string User::input(const std::string &main_prompt, const std::string &data_type, const std::string &other_option) {
     while (true) {
         if (data_type == "std::string")
-            printf("Enter %s:", main_prompt.c_str());
+            printf("Enter %s or (0) to exit:", main_prompt.c_str());
         else
             printf("Enter (1) for %s or (0) for %s:", main_prompt.c_str(), other_option.c_str());
         std::string rawInput;
@@ -35,7 +35,7 @@ bool User::change_pin(const bool &first_time) {
     int trials = 0;
     while (++trials <= MAX_PI_CHANGE_TRIALS) {
         if (!first_time) {
-            std::string oldPassword = User::input("Your Old Password (0) to exit");
+            std::string oldPassword = User::input("Your Old Password");
             if (oldPassword == "0")
                 return false;
             if (oldPassword != this->_password) {
@@ -44,10 +44,10 @@ bool User::change_pin(const bool &first_time) {
                 continue;
             }
         }
-        std::string newPassword = User::input("Your New Password (0) to exit");
+        std::string newPassword = User::input("Your New Password");
         if (newPassword == "0")
             return false;
-        std::string newPasswordConfirmation = User::input("Your New Password Again for Confirmation (0) to exit");
+        std::string newPasswordConfirmation = User::input("Your New Password Again for Confirmation");
         if (newPasswordConfirmation == "0")
             return false;
         if (newPassword != newPasswordConfirmation) {

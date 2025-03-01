@@ -1,7 +1,7 @@
 #include "Session.hpp"
 
 void Session::sign_up() {
-    const std::string username = User::input("Your Desired Username (0) to exist");
+    const std::string username = User::input("Your Desired Username");
     if (username == "0")
         return;
     this->_user = User(username);
