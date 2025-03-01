@@ -19,6 +19,8 @@ public:
     static std::string input(const std::string &main_prompt, const std::string &data_type = "std::string",
                              const std::string &other_option = "");
 
+    bool change_pin(const bool &first_time = false);
+
     static int subtract(const int &a, const int &b);
 };
 
