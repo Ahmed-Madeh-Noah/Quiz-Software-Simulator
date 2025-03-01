@@ -9,6 +9,8 @@ void Session::sign_up() {
         printf("User already exists\n");
         return;
     }
+    if (!this->_user.change_pin(true))
+        return;
 }
 
 int Session::add(const int &a, const int &b) {
