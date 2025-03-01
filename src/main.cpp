@@ -1,8 +1,10 @@
 #include <Session.hpp>
 
 int main() {
+    std::string exiting;
     do {
         Session session;
-    } while (User::input("continuation", "bool", "exiting") == "1");
+        exiting = User::input("continuation", "bool", "exiting")
+    } while (exiting == "1");
     return EXIT_SUCCESS;
 }
