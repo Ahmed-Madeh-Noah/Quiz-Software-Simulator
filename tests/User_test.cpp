@@ -19,3 +19,39 @@ TEST(add, Positive) {
     EXPECT_EQ(User::add(3, 0), 3);
     EXPECT_EQ(User::add(8, 2), 10);
 }
+
+TEST(is_empty_or_whitespace, Empty) {
+    EXPECT_TRUE(User::is_empty_or_whitespace(""));
+}
+
+TEST(is_empty_or_whitespace, SpecialCharacters) {
+    EXPECT_TRUE(User::is_empty_or_whitespace(" "));
+    EXPECT_TRUE(User::is_empty_or_whitespace("\t"));
+    EXPECT_TRUE(User::is_empty_or_whitespace("\n"));
+}
+
+TEST(is_empty_or_whitespace, SpecialCharactersCobinations) {
+    EXPECT_TRUE(User::is_empty_or_whitespace(" \t\n"));
+    EXPECT_TRUE(User::is_empty_or_whitespace(" \t"));
+    EXPECT_TRUE(User::is_empty_or_whitespace(" \n"));
+    EXPECT_TRUE(User::is_empty_or_whitespace("\t\n"));
+    EXPECT_TRUE(User::is_empty_or_whitespace("  "));
+    EXPECT_TRUE(User::is_empty_or_whitespace("\t\t"));
+    EXPECT_TRUE(User::is_empty_or_whitespace("\n\n"));
+}
+
+TEST(is_empty_or_whitespace, RegularCharacters) {
+    EXPECT_FALSE(User::is_empty_or_whitespace("a"));
+    EXPECT_FALSE(User::is_empty_or_whitespace("A"));
+    EXPECT_FALSE(User::is_empty_or_whitespace("0"));
+    EXPECT_FALSE(User::is_empty_or_whitespace("!"));
+}
+
+TEST(is_empty_or_whitespace, CharacterMix) {
+    EXPECT_FALSE(User::is_empty_or_whitespace(" a"));
+    EXPECT_FALSE(User::is_empty_or_whitespace("a "));
+    EXPECT_FALSE(User::is_empty_or_whitespace("\ta"));
+    EXPECT_FALSE(User::is_empty_or_whitespace("a\t"));
+    EXPECT_FALSE(User::is_empty_or_whitespace("\na"));
+    EXPECT_FALSE(User::is_empty_or_whitespace("a\n"));
+}
