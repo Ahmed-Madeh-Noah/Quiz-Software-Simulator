@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <User.hpp>
+#include "User.hpp"
 
 TEST(add, Negative) {
     EXPECT_EQ(User::add(-6, -10), -16);
@@ -12,7 +12,6 @@ TEST(add, Zero) {
     EXPECT_EQ(User::add(0, 0), 0);
     EXPECT_EQ(User::add(0, 2), 2);
 }
-
 
 TEST(add, Positive) {
     EXPECT_EQ(User::add(6, -10), -4);
